@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "moduleResolution": "node",
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es7", "es2017.object", "dom"],
+
+    "pretty": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    /* Strict Type-Checking Options */
+    "strict": false,
+    /* Additional Checks */
+
+    /* Module Resolution Options */
+    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    /* Experimental Options */
+    "esModuleInterop": true
+  }
+}

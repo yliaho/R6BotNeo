@@ -1,0 +1,155 @@
+body {
+  background-color: #1a1a1b;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(215, 218, 220);
+  font-family: sans-serif;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+h1 {
+  background-color: #4b387a;
+  font-size: 0.85em;
+  font-weight: normal;
+  padding: 0.5em 1em;
+  margin: 0;
+}
+
+h1:before {
+  height: 1em;
+  width: 1em;
+  content: '';
+  display: inline-block;
+  vertical-align: bottom;
+  background-image: url(%%stream-twitch-logo%%);
+  background-size: cover;
+  margin-right: 0.5em;
+}
+
+.md > blockquote:nth-of-type(1) {
+  display: flex;
+  padding: 0 1em;
+  margin-top: 1em;
+  flex-direction: row-reverse;
+  margin-bottom: 1em;
+}
+
+hr {
+  display: none;
+}
+
+.md > blockquote:nth-of-type(1) > p {
+  background-color: red;
+  margin: 0;
+  display: block;
+  height: 2.8em;
+  width: 2.8em;
+  min-width: 2.8em;
+  border-radius: 3px;
+  background-image: url(%%stream-avatar%%);
+  background-size: cover;
+}
+
+.md > blockquote:nth-of-type(1) > blockquote {
+  width: 100%;
+  margin-left: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.md > blockquote:nth-of-type(1) > blockquote h2 {
+  font-size: 0.85em;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 212px;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+
+.md > blockquote:nth-of-type(1) > blockquote p {
+  margin: 0;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+/* thumbnaiil */
+.md > blockquote:nth-of-type(2) {
+  display: flex;
+  background-color: gray;
+  background-image: url('%%stream-thumbnail%%');
+  height: 176px;
+  background-size: cover;
+  position: relative;
+}
+
+/* .md > blockquote:nth-of-type(2):after {
+  content: '';
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  width: 100%;
+  height: 32px;
+  position: absolute;
+  bottom: 0;
+} */
+
+.md > blockquote:nth-of-type(2) p {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding: 0.7em;
+  margin: 0;
+}
+
+.md > blockquote:nth-of-type(2) p a {
+  pointer-events: none;
+  color: rgb(215, 218, 220);
+  text-decoration: none;
+}
+
+.md > blockquote:nth-of-type(2) p a:last-of-type {
+  background-color: #ec1314;
+  font-size: 0.75em;
+  padding: 0.3em 0.4em;
+  border-radius: 3px;
+  text-align: center;
+  width: 27px;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.md > blockquote:nth-of-type(2) p > a[href='#viewer_count'] {
+  font-size: 0.85em;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  padding: 0.2em 0.5em;
+}
+
+.md > p {
+  display: block;
+  text-align: center;
+  margin: 0;
+  margin-top: 1.2em;
+}
+
+.md > p > a {
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 0 0 1.5px rgb(215, 218, 220);
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 0.35em;
+  font-size: 0.9em;
+  min-width: 15ex;
+  display: inline-block;
+  text-transform: uppercase;
+}

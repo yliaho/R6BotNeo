@@ -1,0 +1,42 @@
+{
+  "name": "r6bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "yarn build --watch",
+    "nodemon": "nodemon --signal SIGHUP dist/index.js -q",
+    "dev": "yarn run build && run-p nodemon watch"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*",
+      "src/*"
+    ],
+    "delay": 1000,
+    "verbose": false
+  },
+  "_moduleAliases": {
+    "@": "dist"
+  },
+  "dependencies": {
+    "@types/snoowrap": "^1.15.2",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "dotenv-safe": "^6.1.0",
+    "form-data": "^2.3.3",
+    "module-alias": "^2.1.0",
+    "nock": "^10.0.6",
+    "s3": "^4.4.0",
+    "snoowrap": "^1.15.2"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.25",
+    "@types/dotenv-safe": "^5.0.3",
+    "@types/request": "^2.48.1",
+    "nodemon": "^1.18.9",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.3.1"
+  }
+}
